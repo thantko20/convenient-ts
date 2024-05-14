@@ -22,13 +22,13 @@ type UnDotToObj<
   Keys extends DotNestedKeys<Obj>
 > = Keys extends `${infer First}.${infer Rest}`
   ? {
-      [K in keyof Obj extends First ? First : never]: Obj[K];
+      [K in keyof Obj extends First ? never : First]: `${First}.${Rest}`;
     }
   : {
       [K in keyof Obj]: Obj[K];
     };
 
-const test: UnDotToObj<User, "preferences.gender" | "age"> = {};
+const test: UnDotToObj<User, "preferences.gender"> = {};
 
 type Test = {
   user: {
