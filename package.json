@@ -1,0 +1,13 @@
+{
+	"scripts": {
+		"tsx": "tsx"
+	},
+	"devDependencies": {
+		"@types/lodash": "^4.17.1",
+		"tsx": "^4.10.2",
+		"typescript": "^5.4.5"
+	},
+	"dependencies": {
+		"lodash": "^4.17.21"
+	}
+}
